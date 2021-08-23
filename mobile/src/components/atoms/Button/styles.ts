@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
+import { BaseTouchContainer } from '../Container';
 
-export const ButtonContainer = styled.TouchableOpacity.attrs(
+export const ButtonContainer = styled(BaseTouchContainer).attrs(
   ({ outline }: { outline: boolean }) => ({
     outline,
   })

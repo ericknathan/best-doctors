@@ -1,14 +1,15 @@
 import React, { ReactNode } from 'react';
 import { ButtonContainer, TextButton } from './styles';
+import { AllProps } from '~/styled';
 
-type Props = {
+interface Props extends AllProps {
   children: ReactNode;
-  outline: boolean;
-};
+  outline?: boolean;
+}
 
-export const Button = ({ children, outline }: Props) => {
+export const Button = ({ children, outline, ...props }: Props) => {
   return (
-    <ButtonContainer outline={outline}>
+    <ButtonContainer outline={outline} {...props}>
       <TextButton outline={outline}>
         {String(children).toUpperCase()}
       </TextButton>

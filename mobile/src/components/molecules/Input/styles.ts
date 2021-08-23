@@ -1,8 +1,22 @@
 import styled from 'styled-components/native';
+import { BaseContainer } from '~/components/atoms/Container';
 
-export const InputContainer = styled.View.attrs(
-  ({ focus }: { focus: boolean }) => ({
+export const InputContainer = styled(BaseContainer).attrs(
+  ({
     focus,
+    pl,
+    pt,
+    pb,
+  }: {
+    focus: boolean;
+    pl: number;
+    pt: number;
+    pb: number;
+  }) => ({
+    focus,
+    pl,
+    pt,
+    pb,
   })
 )`
   display: flex;
