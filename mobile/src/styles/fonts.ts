@@ -1,6 +1,6 @@
 export const fonts = {
-  bold: 'IBMPlexSans-Bold',
-  medium: 'IBMPlexSans-Medium',
-  regular: 'IBMPlexSans-Regular',
-  semiBold: 'IBMPlexSans-SemiBold',
+  bold: 'IBMPlexSans_700Bold',
+  medium: 'IBMPlexSans_500Medium',
+  regular: 'IBMPlexSans_400Regular',
+  semiBold: 'IBMPlexSans_600SemiBold',
 };

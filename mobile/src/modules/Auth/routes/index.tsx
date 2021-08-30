@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { SplashScreen, LoginScreen } from '../screens';
+import { SplashScreen, LoginScreen, CreateAccountScreen } from '../screens';
 
 export const AuthNavigator = () => {
   const Stack = createStackNavigator();
@@ -11,6 +11,7 @@ export const AuthNavigator = () => {
       }}>
       <Stack.Screen name="Splash" component={SplashScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
     </Stack.Navigator>
   );
 };

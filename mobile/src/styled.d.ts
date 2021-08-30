@@ -4,8 +4,8 @@ import { metrics } from './styles/metrics';
 import { fonts } from './styles/fonts';
 
 export interface AllProps {
-  w?: number;
-  h?: number;
+  w?: number | string;
+  h?: number | string;
   mt?: number;
   mb?: number;
   ml?: number;

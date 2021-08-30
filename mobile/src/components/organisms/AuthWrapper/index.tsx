@@ -3,7 +3,7 @@ import { Title } from '~/components/atoms';
 import { Container } from './styles';
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
   title: string;
 };
 
