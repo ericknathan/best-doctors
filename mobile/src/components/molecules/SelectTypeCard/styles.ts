@@ -1,10 +1,7 @@
 import styled from 'styled-components/native';
+import { BaseTouchContainer } from '~/components/atoms/Container';
 
-export const CardContainer = styled.TouchableOpacity.attrs(
-  ({ selected }: { selected: boolean }) => ({
-    selected,
-  })
-)`
+export const CardContainer = styled(BaseTouchContainer)`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,6 +37,9 @@ export const CheckCircle = styled.View.attrs(
     selected,
   })
 )`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: ${({ theme }) => theme.metrics.px(24)}px;
   width: ${({ theme }) => theme.metrics.px(24)}px;
   border-color: ${({ theme, selected }) =>
