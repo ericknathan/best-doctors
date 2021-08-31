@@ -1,21 +1,25 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, Element } from 'react';
 import { Title } from '~/components/atoms';
-import { Container } from './styles';
+import { Container, ButtonContainer, ContentContainer } from './styles';
 
 type Props = {
   children?: ReactNode;
-  title: string;
+  title?: string;
+  bottomChildren?: Element;
 };
 
-export const AuthWrapper = ({ children, title }: Props) => {
+export const AuthWrapper = ({ children, title, bottomChildren }: Props) => {
   return (
     <Container>
-      {title && (
-        <Title w="100%" mb={48}>
-          {title}
-        </Title>
-      )}
-      {children}
+      <ContentContainer>
+        {title && (
+          <Title w="100%" mb={48}>
+            {title}
+          </Title>
+        )}
+        {children}
+      </ContentContainer>
+      <ButtonContainer>{bottomChildren}</ButtonContainer>
     </Container>
   );
 };
