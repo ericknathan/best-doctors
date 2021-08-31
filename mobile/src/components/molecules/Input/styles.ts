@@ -49,3 +49,9 @@ export const InputText = styled.TextInput`
   margin: 0;
   padding: 0;
 `;
+
+export const ErrorLabel = styled.Text`
+  font-size: ${({ theme }) => theme.metrics.px(12)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: red;
+`;
