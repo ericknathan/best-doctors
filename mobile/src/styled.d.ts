@@ -4,7 +4,7 @@ import { metrics } from './styles/metrics';
 import { fonts } from './styles/fonts';
 
 export interface AllProps {
-  w?: number | string;
+  w?: number | string | '100%';
   h?: number | string;
   mt?: number;
   mb?: number;
@@ -18,6 +18,7 @@ export interface AllProps {
   align?: string;
   justify?: string;
   direction?: string;
+  selected?: boolean;
 }
 
 declare module 'styled-components' {

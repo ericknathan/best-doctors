@@ -10,8 +10,8 @@ interface Props extends AllProps {
 
 export const Button = ({ children, outline, onPress, ...props }: Props) => {
   return (
-    <ButtonContainer outline={outline} {...props}>
-      <TextButton outline={outline} onPress={onPress}>
+    <ButtonContainer outline={outline} {...props} onPress={onPress}>
+      <TextButton outline={outline}>
         {String(children).toUpperCase()}
       </TextButton>
     </ButtonContainer>

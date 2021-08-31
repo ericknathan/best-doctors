@@ -1,6 +1,9 @@
 import styled from 'styled-components/native';
+import { AllProps } from '~/styled';
 
-export const BaseText = styled.Text`
+export const BaseText = styled.Text.attrs((Props: AllProps) => {
+  Props;
+})`
   width: ${({ w }) => w || 'auto'};
   margin-top: ${({ theme, mt }) => theme.metrics.px(mt || 0)}px;
   margin-bottom: ${({ theme, mb }) => theme.metrics.px(mb || 0)}px;
@@ -22,7 +25,13 @@ export const CardTitle = styled(BaseText)`
 `;
 
 export const RegularText = styled(BaseText)`
-  font-size: ${({ theme }) => theme.metrics.px(14)}px;
+  font-size: ${({ theme, size }) => theme.metrics.px(size || 14)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
   color: ${({ theme }) => theme.colors.greyDark};
+`;
+
+export const SemiBoldText = styled(BaseText)`
+  font-size: ${({ theme }) => theme.metrics.px(16)}px;
+  font-family: ${({ theme }) => theme.fonts.semiBold};
+  color: ${({ theme }) => theme.colors.primary};
 `;

@@ -12,7 +12,7 @@ export const TextLink = ({ text, onPress, ...props }: Props) => {
   return (
     <BaseTouchContainer
       align="flex-end"
-      h={20}
+      h={24}
       justify="flex-end"
       onPress={onPress}
       {...props}>
