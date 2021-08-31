@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AuthWrapper, SelectTypeCard, Button } from '~/components';
+import { useAuthStore } from '~/services/store';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 export const SelectAccountTypeScreen = ({
@@ -12,6 +13,7 @@ export const SelectAccountTypeScreen = ({
     'ConfirmPhone'
   >;
 }) => {
+  const { setUser } = useAuthStore();
   const [accountType, setAccountType] = useState('patient');
 
   const handleSelectAccountType = (type: string) => {
@@ -19,7 +21,10 @@ export const SelectAccountTypeScreen = ({
   };
 
   const goToConfirmPhone = () => {
-    navigation.navigate('ConfirmPhone');
+    if (accountType) {
+      setUser({ accountType });
+      navigation.navigate('ConfirmPhone');
+    }
   };
 
   return (
