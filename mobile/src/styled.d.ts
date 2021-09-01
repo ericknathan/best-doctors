@@ -16,9 +16,12 @@ export interface AllProps {
   pr?: number;
   lh?: number;
   align?: string;
+  fontFamily: keyof typeof fonts;
+  fontSize: number;
   justify?: string;
   direction?: string;
   selected?: boolean;
+  color: keyof typeof colors;
 }
 
 declare module 'styled-components' {
