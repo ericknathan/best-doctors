@@ -5,6 +5,7 @@ import {
   TextOpen,
   Avatar,
   CardTitle,
+  SpecialtiesList,
 } from '~/components';
 import {
   HeaderContainer,
@@ -31,6 +32,7 @@ export const HomeScreen = () => {
       <CardTitle ml={24} mt={32}>
         MÉDICOS PRÓXIMOS
       </CardTitle>
+      <SpecialtiesList />
     </BaseBackground>
   );
 };
