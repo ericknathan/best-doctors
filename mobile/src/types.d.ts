@@ -22,6 +22,8 @@ export interface AllProps {
   direction?: string;
   selected?: boolean;
   color: keyof typeof colors;
+  bg: keyof typeof colors;
+  br: number;
 }
 
 declare module 'styled-components' {
@@ -33,4 +35,12 @@ declare module 'styled-components' {
 
   export interface ThemeProps<T> extends AllProps {}
   export interface IntrinsicAttributes extends AllProps {}
+}
+
+export interface Doctor {
+  id?: number;
+  name: string;
+  specialty: string;
+  avatar: string;
+  rating: number;
 }

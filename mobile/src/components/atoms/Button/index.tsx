@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { ButtonContainer, TextButton } from './styles';
-import { AllProps } from '~/styled';
+import { AllProps } from '~/types';
 
 interface Props extends AllProps {
   children: ReactNode;

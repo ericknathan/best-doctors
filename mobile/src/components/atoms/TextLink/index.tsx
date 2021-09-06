@@ -1,7 +1,7 @@
 import React from 'react';
 import { BaseTouchContainer } from '../Container';
 import { CardTitle } from '../Text';
-import { AllProps } from '~/styled';
+import { AllProps } from '~/types';
 
 interface Props extends AllProps {
   text: string;

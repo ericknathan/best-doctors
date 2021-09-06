@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 import backgroundSource from '~/assets/img/main_background.png';
-import { AllProps } from '~/styled';
+import { AllProps } from '~/types';
 
 export const Container = styled.View`
   flex: 1;
@@ -26,6 +26,8 @@ export const BaseContainer = styled.View`
   padding-bottom: ${({ theme, pb }) => theme.metrics.px(pb || 0)}px;
   padding-left: ${({ theme, pl }) => theme.metrics.px(pl || 0)}px;
   padding-right: ${({ theme, pr }) => theme.metrics.px(pr || 0)}px;
+  background-color: ${({ theme, bg }) => theme.colors[bg || 'background']};
+  border-radius: ${({ theme, br }) => theme.metrics.px(br || 0)}px;
 `;
 
 export const BaseTouchContainer = styled.TouchableOpacity.attrs(
@@ -47,6 +49,8 @@ export const BaseTouchContainer = styled.TouchableOpacity.attrs(
   padding-bottom: ${({ theme, pb }) => theme.metrics.px(pb || 0)}px;
   padding-left: ${({ theme, pl }) => theme.metrics.px(pl || 0)}px;
   padding-right: ${({ theme, pr }) => theme.metrics.px(pr || 0)}px;
+  background-color: ${({ theme, bg }) => theme.colors[bg || 'background']};
+  border-radius: ${({ theme, br }) => theme.metrics.px(br || 0)}px;
 `;
 
 export const BaseBackground = styled.ImageBackground.attrs({

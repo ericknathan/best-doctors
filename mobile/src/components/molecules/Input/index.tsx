@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { InputContainer, InputLabel, InputText, ErrorLabel } from './styles';
-import { AllProps } from '~/styled';
+import { AllProps } from '~/types';
 
 interface InputProps extends AllProps {
   label: string;

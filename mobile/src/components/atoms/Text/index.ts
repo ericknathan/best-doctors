@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { AllProps } from '~/styled';
+import { AllProps } from '~/types';
 
 export const BaseText = styled.Text.attrs((Props: AllProps) => {
   Props;
