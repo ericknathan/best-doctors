@@ -4,5 +4,6 @@ export const List = styled.FlatList.attrs({
   contentContainerStyle: {
     paddingHorizontal: 24,
     paddingTop: 16,
+    minHeight: 84,
   },
 })``;

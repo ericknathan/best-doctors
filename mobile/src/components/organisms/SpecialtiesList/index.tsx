@@ -35,13 +35,13 @@ const MOCKDATA: Array<Data> = [
 ];
 
 export const SpecialtiesList = () => {
-  const renderItem = ({ item }) => <SpecialtyCard text={item.title} />;
   return (
     <List
       horizontal
       data={MOCKDATA}
-      renderItem={renderItem}
-      keyExtractor={item => item.id}
+      renderItem={({ item }) => <SpecialtyCard text={item.title} />}
+      keyExtractor={item => item.id.toString()}
+      showsHorizontalScrollIndicator={false}
     />
   );
 };
